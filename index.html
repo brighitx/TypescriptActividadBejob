@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Practica Typescript</title>
+</head>
+
+<body>
+    <h1>Agregar contacto</h1>
+    <form id="formulario">
+        <div class="contenedor-formulario">
+            <div class="contenedor-datos">
+                <div class="contenedor-columna-izquierda">
+                    <div class="contenedor-datos-personales">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" type="text" name="nombre" required>
+                        <label for="apellidos">Apellidos</label>
+                        <input id="apellidos" type="text" name="apellidos" required>
+                        <label for="nombre">Edad</label>
+                        <input id="edad" type="number" name="edad" required>
+                        <label for="dni">DNI</label>
+                        <input id="dni" type="text" name="dni" required>
+                        <label for="cumpleanos">Cumplea&#241;os</label>
+                        <input id="cumpleanos" type="date" name="cumpleanos" required>
+                        <label for="colorFavorito">Color favorito</label>
+                        <input id="colorFavorito" type="text" name="colorFavorito" required>
+                        <label for="sexo">Sexo</label>
+                        <input id="sexo" type="text" name="sexo" required>
+                        <label for="notas">Notas</label>
+                        <input id="notas" type="text" name="notas" required>
+                    </div>
+                    <div class="contenedor-datos-direccion">
+                        <h3>Direcci&#243;n</h3>
+                        <label for="calle">Calle</label>
+                        <input id="calle" type="text" name="calle" required>
+                        <label for="numero">N&#250;mero</label>
+                        <input id="numero" type="number" name="numero" required>
+                        <label for="piso">Piso</label>
+                        <input id="piso" type="text" name="piso" required>
+                        <label for="letra">Letra</label>
+                        <input id="letra" type="text" name="letra" required>
+                        <label for="codigoPostal">C&#243;digo postal</label>
+                        <input id="codigoPostal" type="number" name="codigoPostal" required>
+                        <label for="poblacion">Poblacion</label>
+                        <input id="poblacion" type="text" name="poblacion" required>
+                        <label for="provincia">Provincia</label>
+                        <input id="provincia" type="text" name="provincia" required>
+                    </div>
+                </div>
+                <div class="contenedor-columna-derecha">
+                    <div class="contenedor-datos-telefono">
+                        <h3>Tel&#233;fono</h3>
+                        <label for="tipoTelefono">Tipo</label>
+                        <input id="tipoTelefono" type="text" name="tipoTelefono" required>
+                        <label for="numeroTelefono">N&#250;mero</label>
+                        <input id="numeroTelefono" type="number" name="numeroTelefono" required>
+                    </div>
+                    <div class="contenedor-datos-mail">
+                        <h3>Mail</h3>
+                        <label for="tipoMail">Tipo</label>
+                        <input id="tipoMail" type="text" name="tipoMail" required>
+                        <label for="direccion">Direcci&#243;n</label>
+                        <input id="direccion" type="text" name="direccion" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-botones">
+            <button type="button"  onclick="crearContactoEvent()" id="crearContactoEvent">CREAR</button>
+        </div>
+    </form>
+
+    <h1>Modificar contacto</h1>
+    <form id="formularioModificar">
+        <div class="contenedor-buscador">
+            <label for="buscar">Buscar por DNI:</label>
+            <input type="text" id="buscarDNI" name="buscarDNI">
+            <button type="button" onclick="buscarContactoEvent();" id="buscarContactoEvent">Buscar</button>
+        </div>
+        <div class="contenedor-formulario">
+            <div class="contenedor-datos">
+                <div class="contenedor-columna-izquierda">
+                    <div class="contenedor-datos-personales">
+                        <label for="dni">DNI</label>
+                        <input id="dniEditarMostrar" type="text" name="dni" disabled>
+                    </div>
+                    <div class="contenedor-datos-direccion">
+                        <h3>Direcci&#243;n</h3>
+                        <label for="calle">Calle</label>
+                        <input id="calleEditar" type="text" name="calle" required>
+                        <label for="numero">N&#250;mero</label>
+                        <input id="numeroEditar" type="number" name="numero" required>
+                        <label for="piso">Piso</label>
+                        <input id="pisoEditar" type="text" name="piso" required>
+                        <label for="letra">Letra</label>
+                        <input id="letraEditar" type="text" name="letra" required>
+                        <label for="codigoPostal">C&#243;digo postal</label>
+                        <input id="codigoPostalEditar" type="number" name="codigoPostal" required>
+                        <label for="poblacion">Poblacion</label>
+                        <input id="poblacionEditar" type="text" name="poblacion" required>
+                        <label for="provincia">Provincia</label>
+                        <input id="provinciaEditar" type="text" name="provincia" required>
+                    </div>
+                </div>
+                <div class="contenedor-columna-derecha">
+                    <div class="contenedor-datos-telefono">
+                        <h3>Tel&#233;fono</h3>
+                        <label for="tipo">Tipo</label>
+                        <input id="tipoTelefonoEditar" type="text" name="tipo" required>
+                        <label for="numero">N&#250;mero</label>
+                        <input id="numeroTelefonoEditar" type="number" name="numero" required>
+                    </div>
+                    <div class="contenedor-datos-mail">
+                        <h3>Mail</h3>
+                        <label for="tipo">Tipo</label>
+                        <input id="tipoMailEditar" type="text" name="tipo" required>
+                        <label for="direccion">Direcci&#243;n</label>
+                        <input id="direccionMailEditar" type="text" name="direccion" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-botones">
+            <button type="button" onclick="modificarContactoEvent()" id="modificarContactoEvent">GUARDAR</button>
+        </div>
+    </form>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
